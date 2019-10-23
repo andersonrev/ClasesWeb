@@ -1,0 +1,71 @@
+#cabecera{
+    background-color: grey;
+    font-size: 12pt;
+}
+
+#pie{
+    font-size: 20pt;
+}
+
+
+h1{
+    font-family: Arial;
+    color: red;
+    
+}   
+h2{
+    font-family: Arial;
+    color:burlywood;
+    
+}  
+h3{
+    font-family: Arial;
+    color: yellowgreen;
+    
+}  
+h4{
+    font-family: Arial;
+    color: green;
+    
+}  
+
+p{
+    font-family: Georgia;
+    color: brown;
+
+}
+ 
+
+a{
+    color: black;
+    text-decoration: none
+}
+
+body{
+    background-color: azure     
+}
+
+blockquote{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: solid;
+    border-color: blue;
+    color: rebeccapurple
+}
+
+.justificado {
+    text-align: justify;
+
+}
+
+.centro {
+    text-align: center;
+}
+
+.derecha{
+    text-align: right;
+    color: green;
+}
+
