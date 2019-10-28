@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../ClasesWeb/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <title>Formulario Basico</title>
+    <header>
+
+        <h1>Formulario Basico</h1>
+
+
+    </header>
+</head>
+
+<body>
+    <div class="container" >
+
+        <form action="" class="form-horizontal">
+            <div class="from-grup row " >
+                <label class="col-form-label  col-med-2"> Nombre:</label>
+                <div class="col-form-label col-sm-6">
+                        <input class="form-control is-valid" type="text" placeholder="ingrese su Nombre:" id="nombre" required="true">
+                </div>
+            </div>
+
+            <div class="from-grup row">
+                    <label class="col-form-label  col-med-2"> Apellido:</label>
+                    <div class="col-form-label col-sm-6">
+                            <input class="form-control is-valid" type="text" placeholder="ingrese su Nombre:" id="nombre">
+                    </div>
+                </div>
+
+            <div class="from-group row">
+                <label class="col-form-label col-sm-2 "for=""></label>
+                <div>
+                        <input class="checkbox col-md-offset-6 " name ="remember" type="checkbox">Recuerdame
+
+                </div>
+            </div>
+
+
+            <!--<label> Password:</label>
+            <input type="password" placeholder="ingrese su Password:">
+            <br>
+            <label>Fecha</label>
+            <input type="date" placeholder="Ingrese la fecha">
+            <br>
+            <label>Color:</label>
+            <input type="color" placeholder="Ingrese el color">
+            <br>
+            <label>Semana</label>
+            <input type="week" placeholder="ingrese la semana">
+            <br>
+            <label>correo</label>
+            <input type="email" placeholder="Ingrese el correo">
+            -->
+
+            <div class="from-group">
+                <label>Elija una opcion</label>
+                <select class="" name="" id="opcion">
+                    <option value="opcion1">Opcion1</option>
+                    <option value="opcion2">Opcion2</option>
+                    <option value="opcion3">Opcion3</option>
+                    <option value="opcion4">Opcion4</option>
+                </select>
+
+            </div>
+
+
+            <div class="from-group row">
+                    <label for="">Mensaje</label>
+                    <br>
+                    <textarea class="" name="" id="mensaje" cols="30" rows="10"></textarea>
+            </div>
+
+
+            <label for="">ARCCHIVO</label>
+            <input class="" type="file" name="" id="archivo">
+            <small class=""> MAx 6MB </small>
+
+
+            <button class="btn btn-primary" type="submit">ENVIAR</button>
+
+
+        </form>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
