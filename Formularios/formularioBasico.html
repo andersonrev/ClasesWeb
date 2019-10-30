@@ -1,70 +1,98 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="../ClasesWeb/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-        <title>Formulario Basico</title>
-        <header>
-            <div class="container">
-                <h1>Formulario Basico</h1>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../ClasesWeb/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <title>Formulario Basico</title>
+    <header>
+        <div class="container">
+            <h1>Formulario Basico</h1>
+        </div>
 
-            <form action="" class="">
-                <div class="form-group">
-                    <label> Nombre:</label>
-                    <input class="form-control" type="text" placeholder="ingrese su Nombre:" id="nombre">
-                </div>
+    </header>
+</head>
 
-                <!--<label> Password:</label>
-                <input type="password" placeholder="ingrese su Password:">
-                <br>
-                <label>Fecha</label>
-                <input type="date" placeholder="Ingrese la fecha">
-                <br>
-                <label>Color:</label>
-                <input type="color" placeholder="Ingrese el color">
-                <br>
-                <label>Semana</label>
-                <input type="week" placeholder="ingrese la semana">
-                <br>
-                <label>correo</label>
-                <input type="email" placeholder="Ingrese el correo">
-                -->
-                <div class="form-group">
-                    <label>Elija una opcion</label>
-                    <select class="form-control" name="" id="opcion">
-                        <option value="opcion1">Opcion1</option>
-                        <option value="opcion2">Opcion2</option>
-                        <option value="opcion3">Opcion3</option>
-                        <option value="opcion4">Opcion4</option>
-                    </select>
-                </div>
-                <br>
-                <label for="">Mensaje</label>
-                <br>
-                <textarea class="form-control" name="" id="mensaje" cols="30" rows="10"></textarea>
-                <br>
+<body>
+
+        <nav class="navbar navbar-expand-sm bg-light fixed-top">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-brand" href="../05-navegacion/navegacion.html">
+                            <img width="50"
+                                src="data:image/png;base64,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"
+                                alt="">
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Formularios/formularioBasico.html">Valores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../WEBClase3/inicio.html">Valores</a>
+                    </li>
+                </ul>
+        
+                <form action="" class="form-inline my-2 my-lg-0">
+                    <input type="search" class="form-control mr-sm-2 " placeholder="Ingrese akgo please">
+                    <button class="btn btn-primary">Buscar</button>
+                </form>
+            </nav>
+            
 
 
-                <div class="grom-group">
-                    <label for="">ARCCHIVO</label>
-                    <input class="form-control" type="file" name="" id="archivo">
-                    <small class="help-block"> MAx 6MB  </small>
-                </div>
+    <form action="" class="">
+        <div class="form-group">
+            <label> Nombre:</label>
+            <input class="form-control" type="text" placeholder="ingrese su Nombre:" id="nombre">
+        </div>
 
-                <button class="btn btn-primary" type="submit" >ENVIAR</button>
+        <!--<label> Password:</label>
+                        <input type="password" placeholder="ingrese su Password:">
+                        <br>
+                        <label>Fecha</label>
+                        <input type="date" placeholder="Ingrese la fecha">
+                        <br>
+                        <label>Color:</label>
+                        <input type="color" placeholder="Ingrese el color">
+                        <br>
+                        <label>Semana</label>
+                        <input type="week" placeholder="ingrese la semana">
+                        <br>
+                        <label>correo</label>
+                        <input type="email" placeholder="Ingrese el correo">
+                        -->
+        <div class="form-group">
+            <label>Elija una opcion</label>
+            <select class="form-control" name="" id="opcion">
+                <option value="opcion1">Opcion1</option>
+                <option value="opcion2">Opcion2</option>
+                <option value="opcion3">Opcion3</option>
+                <option value="opcion4">Opcion4</option>
+            </select>
+        </div>
+        <br>
+        <label for="">Mensaje</label>
+        <br>
+        <textarea class="form-control" name="" id="mensaje" cols="30" rows="10"></textarea>
+        <br>
 
 
-            </form>
-        </header>
-    </head>
+        <div class="grom-group">
+            <label for="">ARCCHIVO</label>
+            <input class="form-control" type="file" name="" id="archivo">
+            <small class="help-block"> MAx 6MB </small>
+        </div>
 
-    <body>
+        <button class="btn btn-primary" type="submit">ENVIAR</button>
 
 
-    </body>
+    </form>
 
-    </html>
+
+</body>
+
+</html>
