@@ -64,3 +64,33 @@ console.log(sumarNumeros(1,2,3,4))
 
 console.log(sumarNumeros(1,"2",3,4))
 
+
+function EnMayusculas(nombre, funcion){
+    return `${funcion(nombre)}`;
+}
+
+console.log(EnMayusculas("Anderson",convertirMayusculas));
+
+function convertirMayusculas(texto){
+    return texto.toUpperCase();
+}
+
+function convertirMinusculas(texto){
+    return texto.toLowerCase();
+}
+
+function agregarPunto(texto){
+    return texto + '.';
+}
+
+function primeraLetraMayuscula(texto){
+    var primeraLetraEnMayuscula = texto[0].toUpperCase();
+    var restoPalabra = texto.slice(1,texto.length);
+    return `${primeraLetraEnMayuscula}${restoPalabra}`
+
+}
+
+console.log(EnMayusculas("FAbiAn", convertirMinusculas));
+console.log(EnMayusculas("Pongale puntico despues del texto", agregarPunto));
+console.log(EnMayusculas("pongaleMayusculaLaPrimeraLetra",primeraLetraMayuscula));
+

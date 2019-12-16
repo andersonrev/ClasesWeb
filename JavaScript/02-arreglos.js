@@ -65,3 +65,5 @@ console.log(datosUsuario)
 var atributosObjeto = Object.keys(datosUsuario);
 console.log(atributosObjeto);
 console.log(datosUsuario[atributosObjeto[3]])
+
+
