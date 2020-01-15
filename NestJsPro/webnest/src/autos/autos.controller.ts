@@ -1,4 +1,4 @@
-import { Controller, Get ,Response} from "@nestjs/common";
+import { Controller, Get ,Response, Res} from "@nestjs/common";
 import { AutosService } from "./autos.service";
 
 @Controller()
@@ -7,17 +7,14 @@ export class AutosController {
 
     }
 
-    @Get()
+    @Get('lista')
     listarAutos(
-        @Response(res){
-            const arreglo = this._autosService.bddAutos,
-            res.render('autos/crear-auto',{
-                arregloAutos: arreglo
-            })
-        }
+        @Res() res
     ){
+        const arreglos = this._autosService.bddAutos;
+        res.render('autos/lista-autos',{arregloAutos:arreglos})
+    }
 
         
      
-    }
 }

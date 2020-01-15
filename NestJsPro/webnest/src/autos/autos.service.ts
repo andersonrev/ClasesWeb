@@ -1,8 +1,11 @@
 import { Injectable } from "@nestjs/common";
+//import {Auto} from './interfaces/auto-interface'
+import {lightseagreen} from 'color-name';
 
 @Injectable()
 export class  AutosService {
     bddAutos= [];
+    
     numRegistros =1 ;
     constructor(){
         const auto = {
@@ -19,6 +22,8 @@ export class  AutosService {
     listar(nuevoAuto){
         nuevoAuto.id = this.numRegistros;
         this.numRegistros ++;
+        this.bddAutos.push(nuevoAuto);
+        return nuevoAuto;
 
     }
 

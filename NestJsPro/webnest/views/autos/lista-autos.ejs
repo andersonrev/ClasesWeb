@@ -1,0 +1,38 @@
+<% const nombre='Daniel';%>
+<h1>Lista autos</h1>
+<%=nombre%>
+
+<% const arregloNum = [1,2,3,4]; %>
+<% arregloNum.forEach((valorActual)=> { %>
+
+    <li>Numero: <%= valorActual %></li>
+
+<%}) %>
+
+<style>
+table, th, td {
+    border: 1px solid black
+}
+</style>
+
+<table>
+
+<tr>
+    <th>Nombre</th>
+    <th>tipo</th>
+    <th>año</th>
+    <th>fecha</th>
+    <th>precio</th>    
+</tr>
+<% arregloAutos.forEach((auto) => { %>
+<tr>
+    <td><%=auto.nombre%></td>
+    <td><%=auto.tipo%></td>
+    <td><%=auto.anio%></td>
+    <td><%=auto.fecha%></td>
+    <td><%=auto.precio%></td>
+</tr>
+
+
+<%} )%>
+</table>
