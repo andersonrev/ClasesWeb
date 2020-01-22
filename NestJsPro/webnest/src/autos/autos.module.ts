@@ -3,10 +3,17 @@ import { AutosController } from './autos.controller';
 import { AutosService } from './autos.service';
 
 @Module({
-  imports: [],
-  controllers: [AutosController],
-  providers: [AutosService],
+  imports: [
+      //modules
+    ],
+  controllers: [
+      AutosController
+      //controladores
+    ],
+  providers: [
+      AutosService
+      //validarCedulaService
+      //servicios
+    ],
 })
-export class AutosModule {
-    
-}
+export class AutosModule {}

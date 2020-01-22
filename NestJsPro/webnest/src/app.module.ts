@@ -13,7 +13,8 @@ import { AutosService } from './autos/autos.service';
     AppController,
     AutosController
   ],
-  providers: [AppService,
+  providers: [
+    AppService,
   AutosService],
 })
 export class AppModule {}

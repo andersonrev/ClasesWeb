@@ -1,38 +1,58 @@
+<!--
 <% const nombre='Daniel';%>
 <h1>Lista autos</h1>
 <%=nombre%>
+<ol>
+<%  const arregloNum=[1,2,3,4];     %>
+<%  arregloNum.forEach((valorActual)=>{             %>
+<li>Numero: <%=    valorActual    %></li>
+<%  })      %>
+</ol>
+-->
+<br>
+<br>
+<a href="/crear">
+    <button>Crear</button>
+</a>
+<br>
+<br>
+<form action="/buscar" method="POST">
+    <input type="text" id="busquedaId" placeholder="Busqueda" name="busqueda">
+    <button type="submit">Buscar</button>
+</form>
+<br>
+<br>
+<h1>Autos</h1>
+<table border=1>
+    <tr>
+        <td>Nombre</td>
+        <td>Tipo</td>
+        <td>Año</td>
+        <td>Fecha</td>
+        <td>Precio</td>
+        <td colspan="2">Acciones</td>
+    </tr>
+    <%arregloAutos.forEach((auto)=>{%>
+    <tr>
+        <td><%=auto.nombre%></td>
+        <td><%=auto.tipo%></td>
+        <td><%=auto.anio%></td>
+        <td><%=auto.fecha%></td>
+        <td><%=auto.precio%></td>
+        <td>
+                <a href="/editar/<%=auto.id%>">
+                    <input id="id" name="id" type="number" value="<%auto.id%>" hidden>
+                    <button>Editar</button>
+                </a>
+        </td>
+        <td>
+                <br>
+                <form action="/eliminar" method="POST">
+                    <input id="id" name="id" type="number" value="<%=auto.id%>" hidden>
+                    <button>Borrar</button>
+                </form>
+            </td>
 
-<% const arregloNum = [1,2,3,4]; %>
-<% arregloNum.forEach((valorActual)=> { %>
-
-    <li>Numero: <%= valorActual %></li>
-
-<%}) %>
-
-<style>
-table, th, td {
-    border: 1px solid black
-}
-</style>
-
-<table>
-
-<tr>
-    <th>Nombre</th>
-    <th>tipo</th>
-    <th>año</th>
-    <th>fecha</th>
-    <th>precio</th>    
-</tr>
-<% arregloAutos.forEach((auto) => { %>
-<tr>
-    <td><%=auto.nombre%></td>
-    <td><%=auto.tipo%></td>
-    <td><%=auto.anio%></td>
-    <td><%=auto.fecha%></td>
-    <td><%=auto.precio%></td>
-</tr>
-
-
-<%} )%>
+    </tr>
+    <%})%>
 </table>

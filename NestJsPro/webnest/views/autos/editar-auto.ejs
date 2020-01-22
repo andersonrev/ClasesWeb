@@ -1,11 +1,11 @@
-<h1>Formulario de registro de autos</h1>
-<form action="/crear" method="post">
+<h1>Formulario de actualizacion de autos</h1>
+<form action="/editar/<%=auto.id%>" method="post">
     <label>Nombre</label>
-    <input id="nombreId" name="nombre" type="text" required>
+    <input id="nombreId" name="nombre" type="text" value="<%=auto.nombre%>">
     <br>
     <br>
     <label>Tipo</label>
-    <select id="tipoId" name="tipo" type="text" required>
+    <select id="tipoId" name="tipo" type="text" value="<%=auto.tipoId%>">
         <option value="Deportivo">Deportivo</option>
         <option value="Camioneta">Camioneta</option>
         <option value="Taxi">Taxi</option>
@@ -15,15 +15,15 @@
     <br>
     <br>
     <label>Año</label>
-    <input id="anioId" name="anio" type="number" required>
+    <input id="anioId" name="anio" type="number" value="<%=auto.anio%>">
     <br>
     <br>
     <label>Fecha</label>
-    <input id="fechaId" name="fecha" type="date" min="2020-01-01" max="2020-31-12" required>
+    <input id="fechaId" name="fecha" type="date" value="<%=auto.fecha%>">
     <br>
     <br>
     <label>Precio</label>
-    <input id="precioId" name="precio" type="number" min="0" step="1" required>
+    <input id="precioId" name="precio" type="number" min="0" step="1" value="<%=auto.precio%>">
     <br>
     <br>
     <button type="reset">Limpiar</button>
