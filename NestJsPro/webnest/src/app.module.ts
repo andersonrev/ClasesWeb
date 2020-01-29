@@ -10,7 +10,7 @@ import { AutoEntity } from './autos/auto.entity';
 @Module({
   imports: [
     AutosModule,
-    TypeOrmModule.forRoot({
+   /* TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
       port: 3306,
@@ -19,7 +19,7 @@ import { AutoEntity } from './autos/auto.entity';
       database: 'auto',
       entities: [AutoEntity],
       synchronize: true,
-    }),
+    }),*/
   ],
   controllers: [
     AppController,
@@ -27,6 +27,6 @@ import { AutoEntity } from './autos/auto.entity';
   ],
   providers: [
     AppService,
-  AutosService],
+    AutosService],
 })
 export class AppModule {}

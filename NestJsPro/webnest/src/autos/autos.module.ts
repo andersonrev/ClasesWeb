@@ -7,7 +7,7 @@ import {AutoEntity} from './auto.entity'
 @Module({
   imports: [
       //modules
-      TypeOrmModule.forFeature([AutoEntity],'default')
+     // TypeOrmModule.forFeature([AutoEntity],'default')
 
     ],
   controllers: [
